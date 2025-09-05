@@ -278,6 +278,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 For questions or issues:
 
 * Create an issue in this repository
-* Contact: [your.email@institution.edu]
+* Contact: [shh0409@snu.ac.kr]
 
 
