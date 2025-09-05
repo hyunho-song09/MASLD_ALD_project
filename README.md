@@ -7,7 +7,7 @@ This repository contains an optimized R pipeline for multi-omics analysis of liv
 ## Repository Structure
 
 ### PART1_step1-3.R
-### * Correlation analysis, explained variance, and PCoA
+ * Correlation analysis, explained variance, and PCoA
 
 ### PART1_step4-6.R
 ### * Disease progression analysis and ROC-based classification
