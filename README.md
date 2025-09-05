@@ -112,9 +112,171 @@ source("PART1_step1-3.R")
 
 ### Outputs:
 
-* ```S1_correlation_results.xlsx:``` Correlation matrices for ALD and MASLD
-* ```S2_PERMANOVA_results.xlsx:``` Explained variance by data type
-* ```S3_PCoA_results.xlsx:``` PCoA analysis results
-* ```Visualization files:``` Correlation heatmaps, variance plots, PCoA plots
+* ```S1_correlation_results.xlsx```: Correlation matrices for ALD and MASLD
+* ```S2_PERMANOVA_results.xlsx:```: Explained variance by data type
+* ```S3_PCoA_results.xlsx:```: PCoA analysis results
+* ```Visualization files:```: Correlation heatmaps, variance plots, PCoA plots
 
-*** Step 4-6: Disease Progression Analysis
+### Step 4-6: Disease Progression Analysis
+```
+source("PART1_step4-6.R")
+```
+### Functions:
+
+* **Maaslin2 Analysis:** Disease progression biomarker identification
+* **Feature Selection:** Exhaustive search for optimal feature combinations
+* **ROC Analysis:** Classification performance evaluation
+
+### Outputs:
+
+* ```S4_maaslin2_progression_results.xlsx:```: Biomarker analysis results
+* ```S5_feature_selection_results.xlsx:```: Optimal feature combinations
+* ```S6_AUC_summary.xlsx:```: Classification performance metrics
+* Visualization files: Forest plots, ROC curves, heatmaps
+
+### Step 7-9: Etiology Analysis and Visualization
+
+```
+source("PART1_step7-9.R")
+```
+
+### Functions:
+* **Etiology Comparison:** ALD vs MASLD differential analysis
+* **UpSet Plot:** Feature overlap visualization
+* **Line Plots:** Disease progression patterns
+
+### Outputs:
+
+* ```S7_etiology_analysis_complete.xlsx```: Comprehensive etiology results
+* ```S8_upset_plot.svg```: Feature intersection visualization
+* ```S9_line_plots/```: Progression pattern visualizations
+
+## Part 2: Functional and Mechanistic Analysis
+### Step 1-3: Functional Association Analysis
+
+
+```
+### Functions:
+
+* **MGS-Phenotype Association:** Species-level disease association
+* **KEGG Module Analysis:** Functional pathway analysis
+* **Leave-One-MGS-Out:** Driver species identification
+
+### Outputs:
+
+* ```S1_MGS_volcano_plot.svg```: Species association results
+* ```S2_KEGG_volcano_plot.svg```: Functional pathway results
+* ```S3_leave_one_MGS_out_detailed.xlsx```: Driver species analysis
+
+### Step 4-6: Driver Species and Strain Analysis
+```
+source("PART2_step4-6.R")
+```
+
+
+### Functions:
+* **Top Driver Extraction:** Key species identification
+* **Density Plot Analysis:** Statistical distribution visualization
+* **Strain Circos Heatmap:** Strain-level pattern visualization
+
+### Outputs:
+
+* ```S4_top_driver_species.xlsx```: Key driver species information
+* ```S5_density_plots_logP.pdf```: Statistical distribution plots
+* ```S6_strain_circos_heatmap.pdf```: Strain pattern visualization
+
+### Step 7-8: Mediation Analysis and Pathway Visualization
+
+```
+source("PART2_step7-8.R")
+```
+
+### Functions:
+* **Mediation Analysis:** Causal pathway analysis (Strain → Metabolite → Clinical)
+* **Sankey Diagrams:** Pathway flow visualization
+
+### Outputs:
+* ```S7_mediation_analysis_complete.csv```: Complete mediation results
+* ```S8_sankey_direction_*.pdf```: Pathway flow diagrams
+
+## Key Features
+### Statistical Methods
+* **Multiple Testing Correction:** Benjamini-Hochberg method
+* **Covariate Adjustment:** Age, gender, BMI correction
+* **Cross-Validation:** 5-fold CV for robust model evaluation
+* **Parallel Processing:** Multi-core computation for efficiency
+
+### Visualization Capabilities
+
+* **Publication-Ready Plots:** High-quality SVG/PDF outputs
+* **Interactive Elements:** Hover information and zooming
+* **Consistent Styling:** Unified color schemes and themes
+* **Multi-Panel Layouts:** Comprehensive result presentation
+
+### Quality Control Features
+
+* **Data Validation:** Automatic format and completeness checks
+* **Error Handling:** Graceful failure with informative messages
+* **Progress Tracking:** Real-time analysis progress indicators
+* **Reproducibility:** Consistent random seeds and parameters
+
+### Configuration
+### Key Parameters (Modifiable in Scripts)
+
+```
+# Analysis parameters
+PREVALENCE_THRESHOLD <- 0.005    # Minimum feature prevalence
+P_VALUE_THRESHOLD <- 0.05        # Significance threshold
+N_CORES <- detectCores() - 2     # Parallel processing cores
+CV_FOLDS <- 5                    # Cross-validation folds
+
+# File paths (modify as needed)
+BASE_DIR <- "your/analysis/directory"
+DATA_DIR <- file.path(BASE_DIR, "data")
+OUTPUT_DIR <- file.path(BASE_DIR, "output")
+```
+## Output Interpretation
+### Part 1 Results
+
+* **Correlation Analysis:** Identifies co-varying features within disease groups
+* **PERMANOVA:** Quantifies data type contribution to disease variation
+* **PCoA:** Visualizes sample clustering and separation patterns
+* **ROC Analysis:** Evaluates biomarker classification performance
+
+### Part 2 Results
+
+* **MGS Association:** Species-level disease associations
+* **Functional Analysis:** Pathway-level disease mechanisms
+* **Mediation Analysis:** Causal relationships between data types
+
+### Troubleshooting
+#### Common Issues
+
+1. **Memory Errors:** Reduce parallel cores or filter features more stringently
+2. **Missing Packages:** Install all required packages and dependencies
+3. **Data Format Issues:** Ensure consistent sample IDs across data types
+4. **File Paths:** Verify data file locations and naming conventions
+
+### Performance Optimization
+
+* Use SSD storage for faster I/O operations
+* Increase RAM allocation: ```options(java.parameters = "-Xmx8g")```
+* Monitor CPU usage during parallel operations
+* Consider data subsampling for initial testing
+
+### Citation
+If you use this pipeline in your research, please cite:
+
+```
+OOO
+```
+
+### License
+This project is licensed under the MIT License - see the LICENSE file for details.
+### Contact
+For questions or issues:
+
+* Create an issue in this repository
+* Contact: [your.email@institution.edu]
+
+
