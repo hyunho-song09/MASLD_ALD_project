@@ -38,7 +38,7 @@ This repository contains an optimized R pipeline for multi-omics analysis of liv
 
 ### Required R Packages
 
-```r
+```
 # Core packages
 install.packages(c("readxl", "writexl", "dplyr", "ggplot2", "tidyr"))
 
@@ -58,7 +58,7 @@ BiocManager::install(c("ComplexHeatmap", "ComplexUpset"))
 
 # Specialized packages
 install.packages(c("Maaslin2", "mixOmics", "mediation", "mlr3", "mlr3learners"))
-```r
+```
 
 ## System Requirements
 
