@@ -113,9 +113,9 @@ source("PART1_step1-3.R")
 ### Outputs:
 
 * ```S1_correlation_results.xlsx```: Correlation matrices for ALD and MASLD
-* ```S2_PERMANOVA_results.xlsx:```: Explained variance by data type
-* ```S3_PCoA_results.xlsx:```: PCoA analysis results
-* ```Visualization files:```: Correlation heatmaps, variance plots, PCoA plots
+* ```S2_PERMANOVA_results.xlsx```: Explained variance by data type
+* ```S3_PCoA_results.xlsx```: PCoA analysis results
+* ```Visualization files```: Correlation heatmaps, variance plots, PCoA plots
 
 ### Step 4-6: Disease Progression Analysis
 ```
@@ -129,9 +129,9 @@ source("PART1_step4-6.R")
 
 ### Outputs:
 
-* ```S4_maaslin2_progression_results.xlsx:```: Biomarker analysis results
-* ```S5_feature_selection_results.xlsx:```: Optimal feature combinations
-* ```S6_AUC_summary.xlsx:```: Classification performance metrics
+* ```S4_maaslin2_progression_results.xlsx```: Biomarker analysis results
+* ```S5_feature_selection_results.xlsx```: Optimal feature combinations
+* ```S6_AUC_summary.xlsx```: Classification performance metrics
 * Visualization files: Forest plots, ROC curves, heatmaps
 
 ### Step 7-9: Etiology Analysis and Visualization
@@ -153,8 +153,9 @@ source("PART1_step7-9.R")
 
 ## Part 2: Functional and Mechanistic Analysis
 ### Step 1-3: Functional Association Analysis
+```
 
-
+source("PART1_step1-3.R")
 ```
 ### Functions:
 
